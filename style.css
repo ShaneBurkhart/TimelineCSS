@@ -1,0 +1,88 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body > header {
+    background-color: #f4f4f4;
+    border-bottom: thin solid #eeeeee;
+    padding: 100px 0 100px 0;
+}
+
+main {
+    /*background-image: url("swirl_pattern.png");*/
+    /*background-repeat: repeat;*/
+    /*min-height: 1000px;*/
+}
+
+.container {
+    width: 900px;
+    margin: 0 auto;
+}
+
+
+#timeline {
+    position: relative;
+    background-color: #eeeeee;
+    padding: 20px 0 20px 0;
+    overflow: hidden;
+}
+
+#timeline:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    bottom: 20px;
+    border: 1px solid #888888;
+}
+
+#timeline article {
+    position: relative;
+    background-color: #ffffff;
+    width: 360px;
+    margin: 0 0 50px 0;
+    padding: 10px 20px;
+    float: left;
+    clear: both;
+}
+
+#timeline article:nth-child(odd) {
+    float: right;
+}
+
+#timeline article:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 0;
+    top: 27px;
+    right: -51px;
+    border: 1px solid #888888;
+}
+
+#timeline article:nth-child(odd):after {
+    left: -49px;
+    right: auto;
+}
+
+#timeline article:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: -59px;
+    width: 10px;
+    height: 10px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+    border: 3px solid #888888;
+    z-index: 1;
+}
+
+#timeline article:nth-child(odd):before {
+    left: -57px;
+    right: auto
+}
